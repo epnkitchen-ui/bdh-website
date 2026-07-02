@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diaspora Investors | Black Diamond Homes - Invest in Abuja from Abroad</title>
+<meta name="description" content="Buy and invest in Abuja real estate from Canada, the UK, or anywhere abroad. Black Diamond Homes handles legal due diligence, virtual inspections, and end-to-end transfer for diaspora investors.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,500&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --red:#B80000; --black:#000000; --white:#FFFFFF;
+    --offwhite:#F9F9F9; --body:#333333; --line: rgba(0,0,0,0.08);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{font-family:'DM Sans', sans-serif;color:var(--body);background:var(--white);-webkit-font-smoothing:antialiased;}
+  h1,h2,h3,.serif{font-family:'Playfair Display', serif;}
+  a{text-decoration:none;color:inherit;}
+  img{display:block;max-width:100%;}
+  .wrap{max-width:1280px;margin:0 auto;padding:0 40px;}
+  .eyebrow{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--red);font-weight:600;}
+
+  header{position:fixed;top:0;left:0;right:0;z-index:100;padding:4px 0;
+    background:rgba(255,255,255,.96);backdrop-filter:blur(10px);box-shadow:0 1px 0 var(--line);}
+  header .wrap{display:flex;align-items:center;justify-content:space-between;}
+  .logo-mark{display:flex;align-items:center;gap:10px;}
+  .logo-mark img{height:162px;width:auto;}
+  .logo-mark span{font-family:'Playfair Display',serif;font-weight:600;font-size:17px;color:var(--black);}
+  nav{display:flex;gap:38px;align-items:center;}
+  nav a{font-size:13px;letter-spacing:.04em;font-weight:500;color:var(--body);position:relative;}
+  nav a.active{color:var(--red);}
+  nav a::after{content:'';position:absolute;left:0;bottom:-6px;width:0;height:1px;background:var(--red);transition:width .3s ease;}
+  nav a:hover::after{width:100%;}
+  .nav-cta{background:var(--red);color:var(--white)!important;padding:11px 22px;border-radius:2px;font-size:12px;letter-spacing:.06em;}
+  .nav-cta::after{display:none;}
+
+  .hero{position:relative;height:64vh;min-height:440px;display:flex;align-items:flex-end;overflow:hidden;}
+  .hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+  .hero::before{content:'';position:absolute;inset:0;
+    background:linear-gradient(180deg, rgba(0,0,0,.5) 0%, rgba(0,0,0,.1) 40%, rgba(0,0,0,.85) 100%);z-index:1;}
+  .hero-content{position:relative;z-index:2;width:100%;padding-bottom:56px;}
+  .hero-content .eyebrow{color:#e88;margin-bottom:14px;}
+  .hero h1{color:var(--white);font-size:clamp(32px,5vw,54px);font-weight:500;max-width:640px;}
+  .hero p{color:rgba(255,255,255,.82);font-size:16px;max-width:520px;margin-top:16px;line-height:1.7;}
+
+  .section{padding:100px 0;}
+  .section-head{margin-bottom:50px;}
+  .section-head h2{font-size:clamp(26px,3.2vw,38px);font-weight:500;}
+  .section-head p{max-width:600px;color:#666;font-size:15px;line-height:1.7;margin-top:12px;}
+
+  /* CONCERNS / SOLUTIONS */
+  .concerns{background:var(--offwhite);}
+  .concern-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+  .concern-card{background:var(--white);border:1px solid var(--line);padding:30px;}
+  .concern-card .q{font-size:12px;letter-spacing:.05em;text-transform:uppercase;color:#999;font-weight:600;margin-bottom:10px;}
+  .concern-card h3{font-size:17px;font-weight:500;margin-bottom:12px;line-height:1.4;}
+  .concern-card p{font-size:14px;color:#666;line-height:1.7;}
+
+  /* PROCESS */
+  .process-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative;}
+  .process-steps::before{content:'';position:absolute;top:26px;left:5%;right:5%;height:1px;background:var(--line);}
+  .step{position:relative;text-align:center;padding:0 16px;}
+  .step-num{
+    width:52px;height:52px;border-radius:50%;background:var(--black);color:var(--white);
+    display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;
+    font-size:18px;margin:0 auto 22px;position:relative;z-index:2;
+  }
+  .step h3{font-size:16.5px;font-weight:500;margin-bottom:10px;}
+  .step p{font-size:13.5px;color:#666;line-height:1.65;}
+
+  /* WHY ABUJA */
+  .why-abuja{background:var(--black);color:var(--white);}
+  .why-abuja .section-head p{color:rgba(255,255,255,.65);}
+  .stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.12);}
+  .stat{background:var(--black);padding:36px 26px;text-align:center;}
+  .stat strong{display:block;font-family:'Playfair Display',serif;font-size:34px;color:var(--red);font-weight:600;margin-bottom:8px;}
+  .stat span{font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:rgba(255,255,255,.6);}
+
+  .cta-band{background:var(--red);color:var(--white);padding:80px 0;text-align:center;}
+  .cta-band h2{font-size:clamp(28px,4vw,42px);font-weight:500;margin-bottom:18px;}
+  .cta-band p{max-width:520px;margin:0 auto 32px;opacity:.9;line-height:1.7;}
+  .cta-actions{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+  .btn{display:inline-block;padding:15px 30px;font-size:13px;letter-spacing:.06em;font-weight:600;border-radius:2px;text-transform:uppercase;transition:.25s;}
+  .btn-ghost{background:transparent;color:var(--white);border:1px solid rgba(255,255,255,.6);}
+  .btn-ghost:hover{background:rgba(255,255,255,.1);}
+  .btn-dark{background:var(--black);color:var(--white);border:1px solid var(--black);}
+  .btn-dark:hover{background:#1a1a1a;}
+
+  footer{background:#0a0a0a;color:rgba(255,255,255,.6);padding:80px 0 30px;}
+  .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:50px;margin-bottom:60px;}
+  .footer-brand img{height:46px;margin-bottom:18px;}
+  .footer-brand p{font-size:14px;line-height:1.7;max-width:280px;}
+  footer h4{color:var(--white);font-size:12px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:20px;font-weight:600;}
+  footer ul{list-style:none;}
+  footer li{margin-bottom:12px;font-size:14px;}
+  footer a:hover{color:var(--red);}
+  .footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:26px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:12px;}
+
+  @media (max-width:900px){
+    nav{display:none;}
+    .concern-grid{grid-template-columns:1fr;}
+    .process-steps{grid-template-columns:1fr 1fr;gap:36px;}
+    .process-steps::before{display:none;}
+    .stat-grid{grid-template-columns:1fr 1fr;}
+    .wrap{padding:0 22px;}
+    .footer-grid{grid-template-columns:1fr 1fr;}
+    .section{padding:70px 0;}
+  }
+  @media (max-width:600px){
+    .process-steps{grid-template-columns:1fr;}
+    .stat-grid{grid-template-columns:1fr;}
+    .footer-grid{grid-template-columns:1fr;}
+  }
+
+.wa-float{
+  position:fixed;bottom:26px;right:26px;z-index:200;
+  width:58px;height:58px;border-radius:50%;
+  background:#25D366;display:flex;align-items:center;justify-content:center;
+  box-shadow:0 6px 18px rgba(0,0,0,.28);
+  transition:transform .2s ease;
+}
+.wa-float:hover{transform:scale(1.08);}
+@media (max-width:600px){
+  .wa-float{width:52px;height:52px;bottom:18px;right:18px;}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a href="/" class="logo-mark">
+      <img src="images/logo.png" alt="Black Diamond Homes">
+    </a>
+    <nav>
+      <a href="/properties.html">Properties</a>
+      <a href="/about.html">About</a>
+      <a href="/legal.html">Legal Services</a>
+      <a href="/diaspora.html" class="active">Diaspora Investors</a>
+      <a href="/blog.html">Insights</a>
+      <a href="/contact.html" class="nav-cta">Contact Us</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <img src="images/hero-residence-aerial.jpg" alt="Abuja real estate for diaspora investors">
+  <div class="hero-content wrap">
+    <div class="eyebrow">Diaspora Investors</div>
+    <h1>Invest in Abuja, from anywhere.</h1>
+    <p>You don't need to be in Nigeria to own property in it. Our Toronto and Abuja offices handle everything on the ground, so you can buy with confidence from Canada, the UK, or wherever home is now.</p>
+  </div>
+</section>
+
+<section class="section concerns">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">The Diaspora Problem</div>
+      <h2 style="margin-top:14px;">The questions every diaspora buyer asks.</h2>
+      <p>Buying property from abroad comes with real risks - and real questions. Here's how we handle the ones we hear most.</p>
+    </div>
+    <div class="concern-grid">
+      <div class="concern-card">
+        <div class="q">Question</div>
+        <h3>"How do I know the property is even real?"</h3>
+        <p>Every listing includes verified title documentation and physical inspection reports. For completed properties, we arrange video walkthroughs so you can inspect before committing - no flying home required.</p>
+      </div>
+      <div class="concern-card">
+        <div class="q">Question</div>
+        <h3>"Who protects my money once I send it?"</h3>
+        <p>Every transaction runs through our legal team, with documented payment milestones tied to construction or transfer stages. You're never wiring funds on trust alone.</p>
+      </div>
+      <div class="concern-card">
+        <div class="q">Question</div>
+        <h3>"What if there's a title dispute after I've paid?"</h3>
+        <p>Title search and verification happens before any offer is accepted - not after. We confirm ownership history, encumbrances, and litigation status at the land registry upfront.</p>
+      </div>
+      <div class="concern-card">
+        <div class="q">Question</div>
+        <h3>"Who manages the property once I own it?"</h3>
+        <p>For investors not relocating immediately, we can connect you with vetted property management partners for rental administration, maintenance, and tenant sourcing.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head" style="text-align:center;">
+      <div class="eyebrow">How It Works From Abroad</div>
+      <h2 style="margin-top:14px;">Four steps, wherever you're based.</h2>
+    </div>
+    <div class="process-steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <h3>Virtual Consultation</h3>
+        <p>A call with our team to understand your budget, goals, and timeline - whether you're buying to live in or to invest.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <h3>Remote Inspection</h3>
+        <p>Video walkthroughs, floor plans, and full documentation sent directly to you before you commit to anything.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <h3>Secure Payment &amp; Legal Transfer</h3>
+        <p>Funds move against documented milestones. Our legal team handles contracts, Governor's Consent, and C of O processing.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">04</div>
+        <h3>Handover or Management</h3>
+        <p>Collect your keys in person, or let us coordinate handover and connect you with property management from day one.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section why-abuja">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Why Abuja</div>
+      <h2 style="margin-top:14px;">A capital city built on planned growth.</h2>
+      <p>As Nigeria's Federal Capital Territory, Abuja offers something Lagos can't: a master-planned city with consistent infrastructure investment and strong diplomatic and government-driven demand for premium housing.</p>
+    </div>
+    <div class="stat-grid">
+      <div class="stat"><strong>2</strong><span>Countries, One Team</span></div>
+      <div class="stat"><strong>7+</strong><span>Active Developments</span></div>
+      <div class="stat"><strong>100%</strong><span>Legally Verified Titles</span></div>
+      <div class="stat"><strong>24h</strong><span>Enquiry Response Time</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="wrap">
+    <h2>Ready to talk through your options?</h2>
+    <p>Book a virtual consultation with our team - no matter which timezone you're in.</p>
+    <div class="cta-actions">
+      <a href="/contact.html" class="btn btn-dark">Book a Consultation</a>
+      <a href="/properties.html" class="btn btn-ghost">Browse Properties</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="images/logo.png" alt="Black Diamond Homes">
+        <p>A cross-border real estate investment and development firm with offices in Toronto, Canada and Abuja, Nigeria.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="/properties.html">Properties</a></li>
+          <li><a href="/about.html">About Us</a></li>
+          <li><a href="/legal.html">Legal Services</a></li>
+          <li><a href="/diaspora.html">Diaspora Investors</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Abuja Office</h4>
+        <ul>
+          <li>10 Zambezi Crescent, Maitama</li>
+          <li>+234 909 006 6660</li>
+        </ul>
+        <h4 style="margin-top:26px;">Toronto Office</h4>
+        <ul>
+          <li>1280 Finch Ave West</li>
+          <li>+1 437 385 1001</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="mailto:info@blackdiamond-homes.com">info@blackdiamond-homes.com</a></li>
+          <li><a href="https://instagram.com/blackdiamond_homesabuja" target="_blank">Instagram</a></li>
+          <li><a href="https://facebook.com/blackdiamondhomes" target="_blank">Facebook</a></li>
+          <li><a href="https://youtube.com/@BlackDiamondHomes" target="_blank">YouTube</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Black Diamond Homes. All rights reserved.</span>
+      <span>Toronto, Canada - Abuja, Nigeria</span>
+    </div>
+  </div>
+</footer>
+
+
+<a href="https://wa.me/2349090066660?text=Hi%20Black%20Diamond%20Homes%2C%20I%27d%20like%20to%20find%20out%20more" target="_blank" class="wa-float" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 32 32" width="30" height="30" fill="#fff"><path d="M16.02 3C9.4 3 4 8.4 4 15.02c0 2.4.65 4.65 1.78 6.6L4 29l7.55-1.98a11.97 11.97 0 0 0 4.47.86h.01c6.62 0 12.02-5.4 12.02-12.02C28.05 8.4 22.65 3 16.02 3zm0 21.9h-.01a9.9 9.9 0 0 1-5.05-1.38l-.36-.21-3.72.98.99-3.62-.24-.37a9.87 9.87 0 0 1-1.52-5.28c0-5.46 4.45-9.9 9.92-9.9 2.65 0 5.13 1.03 7 2.9a9.83 9.83 0 0 1 2.9 7c0 5.47-4.45 9.88-9.91 9.88zm5.43-7.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.24-.46-2.36-1.46-.87-.78-1.46-1.74-1.63-2.04-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.21-.24-.58-.48-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.87 1.22 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2.01-1.42.25-.7.25-1.29.17-1.42-.07-.12-.27-.2-.57-.35z"/></svg>
+</a>
+
+</body>
+</html>
