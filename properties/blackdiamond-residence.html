@@ -37,6 +37,8 @@
   .hero-info .tagline{font-size:15px;color:var(--red);font-style:italic;font-family:'Playfair Display',serif;margin:16px 0 10px;}
   .hero-info h1{font-size:clamp(30px,4vw,44px);font-weight:500;line-height:1.15;margin-bottom:14px;}
   .hero-info .loc{font-size:13.5px;color:#888;letter-spacing:.03em;text-transform:uppercase;margin-bottom:24px;}
+  .unit-img{display:block;width:100%;height:380px;object-fit:cover;object-position:center 35%;}
+  @media (max-width:700px){.unit-img{height:240px;}}
   .price-box{background:var(--offwhite);border:1px solid var(--line);padding:22px 24px;margin-bottom:26px;}
   .price-box .label{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#999;margin-bottom:6px;}
   .price-box .price{font-family:'Playfair Display',serif;font-size:28px;font-weight:600;color:var(--red);}
@@ -175,7 +177,7 @@
     <h2 style="font-size:clamp(24px,3vw,32px);font-weight:500;margin-bottom:36px;">Unit Options</h2>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;">
       <div style="background:var(--white);border:1px solid var(--line);overflow:hidden;">
-        <img src="../images/hero-residence-aerial.jpg" alt="BlackDiamond Residence, 6-bedroom" style="height:220px;width:100%;object-fit:cover;">
+        <img src="../images/hero-residence-aerial.jpg" alt="BlackDiamond Residence, 6-bedroom" class="unit-img">
         <div style="padding:24px;">
           <h3 style="font-size:19px;font-weight:500;margin-bottom:10px;">6-Bedroom Fully Detached Duplex</h3>
           <p style="font-size:14px;color:#555;line-height:1.7;margin-bottom:14px;">2 living rooms, private cinema, spa, and dedicated maid's room. All 6 bedrooms en-suite.</p>
@@ -184,7 +186,7 @@
         </div>
       </div>
       <div style="background:var(--white);border:1px solid var(--line);overflow:hidden;">
-        <img src="../images/bdr_7bed_semi.jpg" alt="BlackDiamond Residence, 7-bedroom semi-detached, Unit 6" style="height:220px;width:100%;object-fit:cover;">
+        <img src="../images/bdr_7bed_semi.jpg" alt="BlackDiamond Residence, 7-bedroom semi-detached, Unit 6" class="unit-img">
         <div style="padding:24px;">
           <h3 style="font-size:19px;font-weight:500;margin-bottom:10px;">7-Bedroom Semi-Detached - Unit 6</h3>
           <p style="font-size:14px;color:#555;line-height:1.7;margin-bottom:14px;">Basement gym and cinema, plus a maid's/driver's room with its own separate entrance.</p>
